@@ -8,7 +8,7 @@
 //     console.log("Tip Amount ", bill * .20);
 // } else if(bill < 1 || bill == NaN) {
 //     console.log("you do not need to tip on 0 dollar bill", bill);
-// } 
+// }
 // else{
 //     console.log("Error, Please provide a number", bill);
 // }
