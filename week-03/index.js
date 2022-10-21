@@ -26,13 +26,13 @@ for (let index = 0; index < names.length; index++) {
 let timeOfDay = "Morning"
 
 //meal options
-let breakfastOption = ['cereal', 'fruit', 'gronola', 'yogurt'];
+let breakfastOption = ['cereal', 'fruit', 'granola', 'yogurt'];
 let lunchOptions = ['sandwich', 'salad', 'burrito', 'hamburger'];
 let dinnerOptions = ['pasta', 'chicken', 'salad', 'soup'];
 
 function whichMenu(time) {
     for (let i = 0; i < breakfastOption.length; i++) {
-        console.log(`breakfastOption[i]');
+        console.log(`breakfastOption[i]'`);
         
     }
 }
