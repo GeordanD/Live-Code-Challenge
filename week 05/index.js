@@ -160,7 +160,7 @@ class MovieService {
 
     mapMovies() {
         document.getElementById("map-movies").innerHTML = this.filteredMovies.map(
-            (movie) => 
+            (movie) => `
                 
                 <div class="card m-4">
                     <div class="card-header bg-secondary text-light">
@@ -177,7 +177,7 @@ class MovieService {
                 </div>
                 </div>
             
-        ).join("")
+        `).join("")
     }
   }
 
