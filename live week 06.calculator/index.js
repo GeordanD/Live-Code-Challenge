@@ -1,3 +1,5 @@
+const operators = ["-", "+", "*", "/"];
+
 class Calculate {
   constructor() {
     this.total = 0;
@@ -43,6 +45,10 @@ class App {
     this.secondPrompt = prompt("Please enter your second number");
     this.secondNumber = parseInt(this.secondPrompt);
     console.log(typeof this.secondNumber, this.secondNumber);
+
+    if (this.operator != operators) {
+      console.log("error Please enter an operator (+, -, *, /)");
+    }
   }
 
   //call the calculations above
@@ -57,9 +63,9 @@ class App {
       case "*":
         this.calc.multiplyNumbers(this.firstNumber, this.secondNumber);
         break;
-        case "/":
-            this.calc.divideNumbers(this.firstNumber, this.secondNumber);
-            break;
+      case "/":
+        this.calc.divideNumbers(this.firstNumber, this.secondNumber);
+        break;
       default:
         alert("invalid number or operator");
         break;
@@ -69,14 +75,19 @@ class App {
   displayResult() {
     this.equation = `${this.firstNumber} ${this.operator} ${this.secondNumber} = ${this.calc.total}`;
 
-    alert(this.equation);
-      console.log(this.equation);
-      
+    if (operators.indexOf(this.operator)) {
+      alert(this.equation); 
+          console.log(this.equation);
+    } else {
+      alert("error Please enter an operator (+, -, *, /)");
+        // console.log("error Please enter an operator (+, -, *, /)");
+    }
+
+
   }
 
   // display the results of the calculation
 }
-
 let startApp = new App();
 startApp.callCalculations();
 startApp.displayResult();
