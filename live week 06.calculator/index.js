@@ -46,8 +46,8 @@ class App {
     this.secondNumber = parseInt(this.secondPrompt);
     console.log(typeof this.secondNumber, this.secondNumber);
 
-    if (this.operator != operators) {
-      console.log("error Please enter an operator (+, -, *, /)");
+    if (this.operator != [operators]) {
+      console.error("error Please enter an operator (+, -, *, /)");
     }
   }
 
@@ -75,12 +75,12 @@ class App {
   displayResult() {
     this.equation = `${this.firstNumber} ${this.operator} ${this.secondNumber} = ${this.calc.total}`;
 
-    if (operators.indexOf(this.operator)) {
+    if (this.operator.indexOf([operators])) {
       alert(this.equation); 
           console.log(this.equation);
     } else {
+      stop()
       alert("error Please enter an operator (+, -, *, /)");
-        // console.log("error Please enter an operator (+, -, *, /)");
     }
 
 
